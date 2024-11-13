@@ -30,11 +30,13 @@ authConfig.js - 用來設定 MSAL 並配置 AAD 資訊
 
 ```javascript
 const msalConfig = {
-auth: {
-clientId: "YOUR_CLIENT_ID", // 替換為 Azure AD 應用的 Client ID
-authority: "https://login.microsoftonline.com/YOUR_TENANT_ID", // 替換為 Tenant ID
-redirectUri: "http://localhost:5173", // 替換為應用的重導向 URI
-}
+  auth: {
+    clientId: "CLIENT_ID", // 請替換為應用程式 (用戶端) 識別碼 (Client ID)
+    authority: "https://login.microsoftonline.com/TENANT_ID", // 請替換為目錄 (租用戶) 識別碼 (Tenant ID)
+    redirectUri: "http://localhost:5173", // 請替換為應用程式申請的重新導向 URI
+    navigateToLoginRequestUrl: true,
+  },
+};
 ```
 
 scopes 定義在 AAD 中請求的權限範圍，決定此應用程式可存取哪些資源。範例中的 User.Read 權限範圍允許應用讀取使用者的基本個人資料。

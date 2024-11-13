@@ -7,11 +7,8 @@ import { PublicClientApplication, LogLevel } from "@azure/msal-browser";
 
 const msalConfig = {
   auth: {
-    // clientId: "CLIENT_ID", // 請替換為應用程式 (用戶端) 識別碼 (Client ID)
-    // authority: "https://login.microsoftonline.com/TENANT_ID", // 請替換為目錄 (租用戶) 識別碼 (Tenant ID)
-    clientId: "f7a9c383-c54b-406f-8de5-09ca947ff683",
-    authority:
-      "https://login.microsoftonline.com/54aa2fea-ecb3-4c71-80b3-de9a356e77c1",
+    clientId: "CLIENT_ID", // 請替換為應用程式 (用戶端) 識別碼 (Client ID)
+    authority: "https://login.microsoftonline.com/TENANT_ID", // 請替換為目錄 (租用戶) 識別碼 (Tenant ID)
     redirectUri: "http://localhost:5173", // 請替換為應用程式申請的重新導向 URI
     navigateToLoginRequestUrl: true,
   },
