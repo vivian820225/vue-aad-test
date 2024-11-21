@@ -54,4 +54,5 @@ export const initializeMsal = async () => {
 
 export const loginRequest = {
   scopes: ["User.Read"], // 定義所需的範圍，可根據需求更改
+  prompt: "login",
 };
